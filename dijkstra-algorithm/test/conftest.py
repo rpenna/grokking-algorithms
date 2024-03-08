@@ -12,5 +12,10 @@ def book_graph_example():
 
 
 @pytest.fixture
-def expected_book_example_costs_graph():
+def book_initial_costs_hash_table_example():
     return {"a": 6, "b": 2, "end": float("inf")}
+
+
+@pytest.fixture
+def book_initial_parents_hash_table_example():
+    return {"a": "start", "b": "start", "end": None}
