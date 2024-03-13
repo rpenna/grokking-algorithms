@@ -4,7 +4,7 @@ def set_costs(graph: dict, initial_vertex: str) -> dict:
         costs[vertex] = cost
     for vertex in graph.keys():
         if vertex not in costs:
-            costs[vertex] = float('inf')
+            costs[vertex] = float("inf")
     return costs
 
 
@@ -18,10 +18,12 @@ def set_parents(costs: dict, parent: str) -> dict:
     return parents
 
 
-def get_lowest_cost(costs: dict) -> str:
+def get_lowest_cost(costs: dict, processed: list = []) -> str:
     lowest_cost = float("inf")
     lowest_vertex = None
     for vertex, cost in costs.items():
+        if vertex in processed:
+            continue
         if cost < lowest_cost:
             lowest_cost = cost
             lowest_vertex = vertex
