@@ -20,7 +20,7 @@ def set_parents(costs: dict, parent: str) -> dict:
 
 def get_lowest_cost(costs: dict, processed: list = []) -> str:
     lowest_cost = float("inf")
-    lowest_vertex = None
+    lowest_vertex = ""
     for vertex, cost in costs.items():
         if vertex in processed:
             continue
