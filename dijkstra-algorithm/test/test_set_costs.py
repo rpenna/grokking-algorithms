@@ -10,7 +10,7 @@ from functions import set_costs
         ("book_exercise_b_graph", "book_exercise_b_initial_costs_hash_table"),
     ],
 )
-def test_given_book_example_graph_when_building_const_graph_from_starting_vertex_then_it_should_return_expected_costs_graph(
+def test_given_graph_when_building_const_graph_from_starting_vertex_then_it_should_return_expected_costs_graph(
     graph, costs, request
 ):
     graph_fixture = request.getfixturevalue(graph)
