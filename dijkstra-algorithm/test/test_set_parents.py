@@ -13,6 +13,10 @@ from functions import set_parents
             "book_exercise_a_initial_costs_hash_table",
             "book_exercise_a_initial_parents_hash_table",
         ),
+        (
+            "book_exercise_b_initial_costs_hash_table",
+            "book_exercise_b_initial_parents_hash_table",
+        ),
     ],
 )
 def test_given_book_initial_costs_hash_table_example_when_creating_initial_parents_hash_table_then_it_should_return_the_expected_values(

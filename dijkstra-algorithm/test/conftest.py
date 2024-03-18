@@ -41,3 +41,24 @@ def book_exercise_a_initial_costs_hash_table():
 @pytest.fixture
 def book_exercise_a_initial_parents_hash_table():
     return {"a": "start", "b": "start", "c": None, "d": None, "end": None}
+
+
+@pytest.fixture
+def book_exercise_b_graph():
+    return {
+        "start": {"a": 10},
+        "a": {"b": 20},
+        "b": {"c": 1, "end": 30},
+        "c": {"a": 1},
+        "end": {},
+    }
+
+
+@pytest.fixture
+def book_exercise_b_initial_costs_hash_table():
+    return {"a": 10, "b": float("inf"), "c": float("inf"), "end": float("inf")}
+
+
+@pytest.fixture
+def book_exercise_b_initial_parents_hash_table():
+    return {"a": "start", "b": None, "c": None, "end": None}
